@@ -1,3 +1,4 @@
+import { AddressListCenter } from '../../components/AddressListCenter';
 import { AddressListTop } from '../../components/AddressListTop';
 
 import { 
@@ -8,6 +9,8 @@ export const AddressList = () => {
     return (
         <Container>
             <AddressListTop />
+            <AddressListCenter />
+
         </Container>
     );
 }
