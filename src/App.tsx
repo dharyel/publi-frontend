@@ -1,8 +1,9 @@
+import { AddressList } from "./pages/AddressList";
 
 function App() {
   return (
     <>
-      Olá, mundo!
+      <AddressList />
     </>
   );
 }
