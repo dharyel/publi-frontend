@@ -19,6 +19,10 @@ export const Wrapper = styled.div `
     align-items: center;
 
     margin: 0 auto;
+
+    @media (max-width: 850px) {
+        padding: 10px 0px 50px 0px;
+    }
 `;
 
 export const AddressCardsWrapper = styled.div`

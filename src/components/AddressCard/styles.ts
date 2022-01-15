@@ -7,7 +7,7 @@ import { colors } from '../../models/theme';
 export const Container = styled.form`
     width: 100%;
     max-width: 1140px;
-    height: 114px;
+    min-height: 114px;
     margin: 0 auto;
     margin-top: 32px;
 `;
@@ -25,13 +25,19 @@ export const Wrapper = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 `;
 
 export const AddressInfos = styled.div`
+    margin-right: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+
+    @media (max-width: 850px) {
+        margin-bottom: 20px;
+    }
 `;
 
 export const AddressInfosTop = styled.div`
