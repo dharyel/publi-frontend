@@ -7,10 +7,11 @@ interface AddressDataTypes{
     city: string;
 }
 
-type MainAddressTypes = 'Principal' | 'Residencial' | 'Comercial' | 'Férias';
+type AddressCategoryTypes = 'Principal' | 'Residencial' | 'Comercial' | 'Férias';
 
 export interface AddressTypes{
-    mainAddress: MainAddressTypes;
+    id?: number;
+    addressCategory: AddressCategoryTypes;
     addressName: string;
     adressData: AddressDataTypes;
 }

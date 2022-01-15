@@ -6,6 +6,10 @@ export const Container = styled.form`
     width: 100%;
     max-width: 1140px;
     height: 52px;
+
+    @media (max-width: 850px) {
+        padding: 0px 32px;
+    }
 `;
 
 export const Search = styled.div`
