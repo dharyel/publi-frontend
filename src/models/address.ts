@@ -13,6 +13,6 @@ export interface AddressTypes{
     id?: number;
     addressCategory: AddressCategoryTypes;
     addressName: string;
-    adressData: AddressDataTypes;
+    addressData: AddressDataTypes;
 }
 

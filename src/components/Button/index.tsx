@@ -2,10 +2,11 @@ import { ButtonElement } from './styles';
 
 interface ButtonProps{
     text: string;
+    onClick?: () => void;
 }
 
-export const Button = ({text}: ButtonProps) => {
+export const Button = ({text, onClick}: ButtonProps) => {
     return (
-        <ButtonElement>{text}</ButtonElement>
+        <ButtonElement onClick={onClick}>{text}</ButtonElement>
     );
 }

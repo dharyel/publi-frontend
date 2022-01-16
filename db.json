@@ -4,7 +4,7 @@
             "id": 1, 
             "addressCategory": "Principal", 
             "addressName": "Churrascaria do gaúcho",
-            "adressData": {
+            "addressData": {
                 "postalCode": "89220100",
                 "street": "Rua rui barbosa",
                 "number": "1000",
@@ -17,7 +17,7 @@
             "id": 2, 
             "addressCategory": "Residencial", 
             "addressName": "Casa da praia",
-            "adressData": {
+            "addressData": {
                 "postalCode": "88210000",
                 "street": "Rua José Alexandre Rocha",
                 "number": "1000",
@@ -30,7 +30,7 @@
             "id": 3, 
             "addressCategory": "Comercial", 
             "addressName": "Meu local de trabalho",
-            "adressData": {
+            "addressData": {
                 "postalCode": "90680570",
                 "street": "Rua Cel. Aparício Borges",
                 "number": "1000",
@@ -43,7 +43,7 @@
             "id": 4, 
             "addressCategory": "Principal", 
             "addressName": "Churrascaria do gaúcho",
-            "adressData": {
+            "addressData": {
                 "postalCode": "89220100",
                 "street": "Rua rui barbosa",
                 "number": "1000",
@@ -56,7 +56,7 @@
             "id": 5, 
             "addressCategory": "Residencial", 
             "addressName": "Casa da praia",
-            "adressData": {
+            "addressData": {
                 "postalCode": "88210000",
                 "street": "Rua José Alexandre Rocha",
                 "number": "1000",
@@ -69,7 +69,7 @@
             "id": 6, 
             "addressCategory": "Comercial", 
             "addressName": "Meu local de trabalho",
-            "adressData": {
+            "addressData": {
                 "postalCode": "90680570",
                 "street": "Rua Cel. Aparício Borges",
                 "number": "1000",
@@ -82,7 +82,7 @@
             "id": 7, 
             "addressCategory": "Principal", 
             "addressName": "Churrascaria do gaúcho",
-            "adressData": {
+            "addressData": {
                 "postalCode": "89220100",
                 "street": "Rua rui barbosa",
                 "number": "1000",
@@ -95,7 +95,7 @@
             "id": 8, 
             "addressCategory": "Residencial", 
             "addressName": "Casa da praia",
-            "adressData": {
+            "addressData": {
                 "postalCode": "88210000",
                 "street": "Rua José Alexandre Rocha",
                 "number": "1000",
@@ -108,7 +108,7 @@
             "id": 9, 
             "addressCategory": "Comercial", 
             "addressName": "Meu local de trabalho",
-            "adressData": {
+            "addressData": {
                 "postalCode": "90680570",
                 "street": "Rua Cel. Aparício Borges",
                 "number": "1000",
@@ -121,7 +121,7 @@
             "id": 10, 
             "addressCategory": "Principal", 
             "addressName": "Churrascaria do gaúcho",
-            "adressData": {
+            "addressData": {
                 "postalCode": "89220100",
                 "street": "Rua rui barbosa",
                 "number": "1000",
@@ -134,7 +134,7 @@
             "id": 11, 
             "addressCategory": "Residencial", 
             "addressName": "Casa da praia",
-            "adressData": {
+            "addressData": {
                 "postalCode": "88210000",
                 "street": "Rua José Alexandre Rocha",
                 "number": "1000",
@@ -147,7 +147,7 @@
             "id": 12, 
             "addressCategory": "Comercial", 
             "addressName": "Meu local de trabalho",
-            "adressData": {
+            "addressData": {
                 "postalCode": "90680570",
                 "street": "Rua Cel. Aparício Borges",
                 "number": "1000",
@@ -160,7 +160,7 @@
             "id": 13, 
             "addressCategory": "Principal", 
             "addressName": "Churrascaria do gaúcho",
-            "adressData": {
+            "addressData": {
                 "postalCode": "89220100",
                 "street": "Rua rui barbosa",
                 "number": "1000",
@@ -173,7 +173,7 @@
             "id": 14, 
             "addressCategory": "Residencial", 
             "addressName": "Casa da praia",
-            "adressData": {
+            "addressData": {
                 "postalCode": "88210000",
                 "street": "Rua José Alexandre Rocha",
                 "number": "1000",
@@ -186,241 +186,7 @@
             "id": 15, 
             "addressCategory": "Comercial", 
             "addressName": "Meu local de trabalho",
-            "adressData": {
-                "postalCode": "90680570",
-                "street": "Rua Cel. Aparício Borges",
-                "number": "1000",
-                "neighborhood": "Glória",
-                "state": "RS",
-                "city": "Porto Alegre"
-            }
-        },
-        { 
-            "id": 16, 
-            "addressCategory": "Principal", 
-            "addressName": "Churrascaria do gaúcho",
-            "adressData": {
-                "postalCode": "89220100",
-                "street": "Rua rui barbosa",
-                "number": "1000",
-                "neighborhood": "Costa e Silva",
-                "state": "SC",
-                "city": "Joinville"
-            }
-        },
-        { 
-            "id": 17, 
-            "addressCategory": "Residencial", 
-            "addressName": "Casa da praia",
-            "adressData": {
-                "postalCode": "88210000",
-                "street": "Rua José Alexandre Rocha",
-                "number": "1000",
-                "neighborhood": "Perequê",
-                "state": "SC",
-                "city": "Porto Belo"
-            }
-        },
-        { 
-            "id": 18, 
-            "addressCategory": "Comercial", 
-            "addressName": "Meu local de trabalho",
-            "adressData": {
-                "postalCode": "90680570",
-                "street": "Rua Cel. Aparício Borges",
-                "number": "1000",
-                "neighborhood": "Glória",
-                "state": "RS",
-                "city": "Porto Alegre"
-            }
-        },
-        { 
-            "id": 19, 
-            "addressCategory": "Principal", 
-            "addressName": "Churrascaria do gaúcho",
-            "adressData": {
-                "postalCode": "89220100",
-                "street": "Rua rui barbosa",
-                "number": "1000",
-                "neighborhood": "Costa e Silva",
-                "state": "SC",
-                "city": "Joinville"
-            }
-        },
-        { 
-            "id": 20, 
-            "addressCategory": "Residencial", 
-            "addressName": "Casa da praia",
-            "adressData": {
-                "postalCode": "88210000",
-                "street": "Rua José Alexandre Rocha",
-                "number": "1000",
-                "neighborhood": "Perequê",
-                "state": "SC",
-                "city": "Porto Belo"
-            }
-        },
-        { 
-            "id": 21, 
-            "addressCategory": "Comercial", 
-            "addressName": "Meu local de trabalho",
-            "adressData": {
-                "postalCode": "90680570",
-                "street": "Rua Cel. Aparício Borges",
-                "number": "1000",
-                "neighborhood": "Glória",
-                "state": "RS",
-                "city": "Porto Alegre"
-            }
-        },
-        { 
-            "id": 22, 
-            "addressCategory": "Principal", 
-            "addressName": "Churrascaria do gaúcho",
-            "adressData": {
-                "postalCode": "89220100",
-                "street": "Rua rui barbosa",
-                "number": "1000",
-                "neighborhood": "Costa e Silva",
-                "state": "SC",
-                "city": "Joinville"
-            }
-        },
-        { 
-            "id": 23, 
-            "addressCategory": "Residencial", 
-            "addressName": "Casa da praia",
-            "adressData": {
-                "postalCode": "88210000",
-                "street": "Rua José Alexandre Rocha",
-                "number": "1000",
-                "neighborhood": "Perequê",
-                "state": "SC",
-                "city": "Porto Belo"
-            }
-        },
-        { 
-            "id": 24, 
-            "addressCategory": "Comercial", 
-            "addressName": "Meu local de trabalho",
-            "adressData": {
-                "postalCode": "90680570",
-                "street": "Rua Cel. Aparício Borges",
-                "number": "1000",
-                "neighborhood": "Glória",
-                "state": "RS",
-                "city": "Porto Alegre"
-            }
-        },
-        { 
-            "id": 25, 
-            "addressCategory": "Principal", 
-            "addressName": "Churrascaria do gaúcho",
-            "adressData": {
-                "postalCode": "89220100",
-                "street": "Rua rui barbosa",
-                "number": "1000",
-                "neighborhood": "Costa e Silva",
-                "state": "SC",
-                "city": "Joinville"
-            }
-        },
-        { 
-            "id": 26, 
-            "addressCategory": "Residencial", 
-            "addressName": "Casa da praia",
-            "adressData": {
-                "postalCode": "88210000",
-                "street": "Rua José Alexandre Rocha",
-                "number": "1000",
-                "neighborhood": "Perequê",
-                "state": "SC",
-                "city": "Porto Belo"
-            }
-        },
-        { 
-            "id": 27, 
-            "addressCategory": "Comercial", 
-            "addressName": "Meu local de trabalho",
-            "adressData": {
-                "postalCode": "90680570",
-                "street": "Rua Cel. Aparício Borges",
-                "number": "1000",
-                "neighborhood": "Glória",
-                "state": "RS",
-                "city": "Porto Alegre"
-            }
-        },
-        { 
-            "id": 28, 
-            "addressCategory": "Principal", 
-            "addressName": "Churrascaria do gaúcho",
-            "adressData": {
-                "postalCode": "89220100",
-                "street": "Rua rui barbosa",
-                "number": "1000",
-                "neighborhood": "Costa e Silva",
-                "state": "SC",
-                "city": "Joinville"
-            }
-        },
-        { 
-            "id": 29, 
-            "addressCategory": "Residencial", 
-            "addressName": "Casa da praia",
-            "adressData": {
-                "postalCode": "88210000",
-                "street": "Rua José Alexandre Rocha",
-                "number": "1000",
-                "neighborhood": "Perequê",
-                "state": "SC",
-                "city": "Porto Belo"
-            }
-        },
-        { 
-            "id": 30, 
-            "addressCategory": "Comercial", 
-            "addressName": "Meu local de trabalho",
-            "adressData": {
-                "postalCode": "90680570",
-                "street": "Rua Cel. Aparício Borges",
-                "number": "1000",
-                "neighborhood": "Glória",
-                "state": "RS",
-                "city": "Porto Alegre"
-            }
-        },
-        { 
-            "id": 31, 
-            "addressCategory": "Principal", 
-            "addressName": "Churrascaria do gaúcho",
-            "adressData": {
-                "postalCode": "89220100",
-                "street": "Rua rui barbosa",
-                "number": "1000",
-                "neighborhood": "Costa e Silva",
-                "state": "SC",
-                "city": "Joinville"
-            }
-        },
-        { 
-            "id": 32, 
-            "addressCategory": "Residencial", 
-            "addressName": "Casa da praia",
-            "adressData": {
-                "postalCode": "88210000",
-                "street": "Rua José Alexandre Rocha",
-                "number": "1000",
-                "neighborhood": "Perequê",
-                "state": "SC",
-                "city": "Porto Belo"
-            }
-        },
-        { 
-            "id": 33, 
-            "addressCategory": "Comercial", 
-            "addressName": "Meu local de trabalho",
-            "adressData": {
+            "addressData": {
                 "postalCode": "90680570",
                 "street": "Rua Cel. Aparício Borges",
                 "number": "1000",

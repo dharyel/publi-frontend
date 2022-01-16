@@ -1,3 +1,4 @@
+import { AddressTypes } from '../../models/address';
 import { 
     Container, 
     Wrapper,
@@ -10,21 +11,28 @@ import {
     AddressType, 
 } from './styles';
 
-export const AddressCard = () => {
+interface AddressCardProps extends AddressTypes {
+    
+}
+
+export const AddressCard = ( {addressCategory, addressName, addressData} : AddressCardProps) => {
+    const addressText = `
+        ${addressData.street}, ${addressData.number}, Bairro ${addressData.neighborhood}, ${addressData.city} - ${addressData.state};
+    `;
     return (
         <Container>
             <Wrapper>
                 <AddressInfos>
                     <AddressInfosTop>
-                        <AddressInfosName>Churrascaria do gaúcho</AddressInfosName>
+                        <AddressInfosName>{addressName}</AddressInfosName>
                         <EditIcon />
                         <TrashIcon />
                     </AddressInfosTop>
 
-                    <AddressInfosText>Rua Rui barbosa, 1000, Costa e Silva, Joinville - SC</AddressInfosText>
+                    <AddressInfosText>{addressText}</AddressInfosText>
                 </AddressInfos>
 
-                <AddressType>Principal</AddressType>
+                <AddressType>{addressCategory}</AddressType>
             </Wrapper>
         </Container>
     );
