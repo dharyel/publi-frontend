@@ -5,12 +5,24 @@ import {
     SearchInput,
  } from './styles';
 
-export const SearchBox = () => {
+interface SearchBoxProps{
+    handleSearch: (event: React.FormEvent<HTMLFormElement> | React.FocusEvent<HTMLInputElement>) => Promise<void>;
+    searchText: string;
+    setSearchText: any;
+};
+
+export const SearchBox = ({handleSearch, searchText, setSearchText}: SearchBoxProps) => {
+    
+    
     return(
-        <Container>
+        <Container onSubmit={(e) => handleSearch(e)}>
             <Search>
                 <Icon />
-                <SearchInput />
+                <SearchInput 
+                    value={searchText}
+                    onChange={(e) => setSearchText(e.target.value)}
+                    onBlur={(e) => handleSearch(e)} 
+                />
             </Search>
         </Container>
         

@@ -17,7 +17,7 @@ interface AddressCardProps extends AddressTypes {
 
 export const AddressCard = ( {addressCategory, addressName, addressData} : AddressCardProps) => {
     const addressText = `
-        ${addressData.street}, ${addressData.number}, Bairro ${addressData.neighborhood}, ${addressData.city} - ${addressData.state};
+        ${addressData.street}, ${addressData.number}, Bairro ${addressData.neighborhood}, ${addressData.city} - ${addressData.state}
     `;
     return (
         <Container>

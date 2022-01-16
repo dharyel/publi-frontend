@@ -12,29 +12,53 @@ import {
 } from './styles';
 
 export const AddressListCenter = () => {
+    const [searchText, setSearchText] = useState('');
     const [addresses, setAddresses] = useState<AddressTypes[]>([] as AddressTypes[]);
     const [showMoreCounter, setShowMoreCounter] = useState(1);
     const cardsToShow = 10;
 
     async function getSavedAddresses() {
-        setShowMoreCounter(showMoreCounter + 1);
-        const resp = await Axios.get<AddressTypes[]>(`address?_page=1&_limit=${cardsToShow * showMoreCounter}`);
-        setAddresses(resp.data);
-        console.log(resp.data);
+        const itensQnt = cardsToShow * showMoreCounter;
+        const resp = await Axios.get<AddressTypes[]>(`address?_page=1&_limit=${itensQnt}`);
+        
+        if (resp){
+            setAddresses(resp.data);
+            console.log(resp.data);
+        } else {
+            console.log('Ocorreu um erro na requisição. Função getSavedAddresses');
+        }
     }
 
     function increaseShowMoreCounter(){
-        getSavedAddresses();
+        setShowMoreCounter(showMoreCounter + 1);
     }
+
+    async function handleSearch(event: React.FormEvent<HTMLFormElement> | React.FocusEvent<HTMLInputElement>){
+        event.preventDefault();
+        console.log(searchText);
+
+        const itensQnt = cardsToShow * showMoreCounter;
+        //const resp = await Axios.get<AddressTypes[]>(`address?_page=1&_limit=${itensQnt}`);
+        const resp = await Axios.get<AddressTypes[]>(`address?addressName_like=${searchText}&_page=1&_limit=${itensQnt}`);
+        
+        if (resp){
+            setAddresses(resp.data);
+            console.log(resp.data);
+        } else {
+            console.log('Ocorreu um erro na requisição. Função getSavedAddresses');
+        }
+
+        setSearchText('');
+    };
 
     useEffect(() => {
         getSavedAddresses();
-    },[]);
+    },[showMoreCounter]);
 
     return(
         <Container>
             <Wrapper>
-                <SearchBox />
+                <SearchBox handleSearch={handleSearch} searchText={searchText} setSearchText={setSearchText} />
 
                 <AddressCardsWrapper>
                     {
