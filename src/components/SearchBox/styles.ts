@@ -26,8 +26,13 @@ export const Icon = styled(FiSearch)`
     position: relative;
     left: 1px;
 
+    cursor: pointer;
     font-size: 13px;
     color: ${colors.textcolorPrimary};
+
+    :hover {
+        filter: brightness(0.5);
+    }
 `;
 
 export const SearchInput = styled.input.attrs({

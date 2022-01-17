@@ -6,7 +6,7 @@ import {
  } from './styles';
 
 interface SearchBoxProps{
-    handleSearch: (event: React.FormEvent<HTMLFormElement> | React.FocusEvent<HTMLInputElement>) => Promise<void>;
+    handleSearch: (event: React.FormEvent<HTMLFormElement> | React.MouseEvent<SVGElement, MouseEvent>) => Promise<void>;
     searchText: string;
     setSearchText: any;
 };
@@ -17,11 +17,10 @@ export const SearchBox = ({handleSearch, searchText, setSearchText}: SearchBoxPr
     return(
         <Container onSubmit={(e) => handleSearch(e)}>
             <Search>
-                <Icon />
+                <Icon onClick={(e) => handleSearch(e)} />
                 <SearchInput 
                     value={searchText}
-                    onChange={(e) => setSearchText(e.target.value)}
-                    onBlur={(e) => handleSearch(e)} 
+                    onChange={(e) => setSearchText(e.target.value)} 
                 />
             </Search>
         </Container>

@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import { AddressTypes } from '../../models/address';
 import { 
     Container, 
@@ -15,17 +16,26 @@ interface AddressCardProps extends AddressTypes {
     
 }
 
-export const AddressCard = ( {addressCategory, addressName, addressData} : AddressCardProps) => {
+export const AddressCard = ( { id, addressCategory, addressName, addressData} : AddressCardProps) => {
     const addressText = `
         ${addressData.street}, ${addressData.number}, Bairro ${addressData.neighborhood}, ${addressData.city} - ${addressData.state}
     `;
+
+    const navigate = useNavigate();
+
+    function handleGoToEditPage() {
+        console.log(id);
+        navigate('/edit');
+    }
+
+
     return (
         <Container>
             <Wrapper>
                 <AddressInfos>
                     <AddressInfosTop>
                         <AddressInfosName>{addressName}</AddressInfosName>
-                        <EditIcon />
+                        <EditIcon onClick={() => handleGoToEditPage()} />
                         <TrashIcon />
                     </AddressInfosTop>
 

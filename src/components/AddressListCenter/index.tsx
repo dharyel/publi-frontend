@@ -1,4 +1,3 @@
-
 import { AddressCard } from '../AddressCard';
 import { Axios } from '../../services/axios';
 import { AddressTypes } from '../../models/address';
@@ -29,13 +28,15 @@ export const AddressListCenter = () => {
         }
     }
 
-    function increaseShowMoreCounter(){
+    async function increaseShowMoreCounter(){
         setShowMoreCounter(showMoreCounter + 1);
     }
 
-    async function handleSearch(event: React.FormEvent<HTMLFormElement> | React.FocusEvent<HTMLInputElement>){
+    async function handleSearch(event: React.FormEvent<HTMLFormElement> | React.MouseEvent<SVGElement, MouseEvent>){
         event.preventDefault();
         console.log(searchText);
+
+        if (searchText === '') return;
 
         const itensQnt = cardsToShow * showMoreCounter;
         //const resp = await Axios.get<AddressTypes[]>(`address?_page=1&_limit=${itensQnt}`);
@@ -65,8 +66,9 @@ export const AddressListCenter = () => {
                         addresses && addresses.map((address) => {
                             return (
                                 <AddressCard
+                                    
                                     key={address.id}
-                                    id={address.id}
+                                    id={address.id as number}
                                     addressCategory={address.addressCategory}
                                     addressName={address.addressName}
                                     addressData={address.addressData}
