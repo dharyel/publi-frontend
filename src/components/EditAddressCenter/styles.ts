@@ -7,8 +7,7 @@ export const Container = styled.div `
     background-color: ${colors.bgGray};
 `;
 
-export const Wrapper = styled.div `
-    
+export const WrapperForm = styled.form `
     max-width: 1440px;
     height: 100%;
     padding: 48px;
@@ -25,14 +24,74 @@ export const Wrapper = styled.div `
     }
 `;
 
-export const AddressCardsWrapper = styled.div`
+export const EditAddressWrapper = styled.div`
+    width: 622px;
+    padding: 32px;
+
+    border-radius: 8px;
+    background-color: ${colors.bgWhite};
+`;
+
+export const InfosText = styled.label `
+    color: ${colors.textcolorPrimary};
+
+    font-size: 18px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+`;
+
+export const InputWrapper = styled.div`
     width: 100%;
-    max-width: 1140px;
-   
-    margin-bottom: 48px;
     
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+`;
+
+export const AddressCategorySelect = styled.select`
+    width: 100%;
+    padding: 16px;
+    
+    color: ${colors.textcolorPrimary};
+
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    border: 0px;
+
+    :focus {
+        outline: 0px;
+    }
+`;
+
+export const AddressCategoryOption = styled.option`
+    color: ${colors.textcolorPrimary};
+
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+`;
+
+export const HorizontalRowInput = styled.hr`
+    width: 100%;
+    height: 2px;
+
+    background-color: ${colors.outlineGrayDark};
+`;
+
+export const AddressInput = styled.input`
+    width: 100%;
+    padding: 16px;
+
+    color: ${colors.textcolorPrimary};
+
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+
+    appearance: none;
+
+    border: 0px;
+
+    :focus {
+        border: 0px;
+        outline: 0px;
+    }
 `;

@@ -1,5 +1,5 @@
-import { AddressListCenter } from '../../components/AddressListCenter';
 import { EditAddressTop } from '../../components/EditAddressTop';
+import { EditAddressCenter } from '../../components/EditAddressCenter';
 
 import { 
     Container,
@@ -9,8 +9,7 @@ export const EditAddress = () => {
     return (
         <Container>
             <EditAddressTop />
-            
-
+            <EditAddressCenter />
         </Container>
     );
 }

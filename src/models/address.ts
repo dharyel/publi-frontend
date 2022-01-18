@@ -7,7 +7,7 @@ interface AddressDataTypes{
     city: string;
 }
 
-type AddressCategoryTypes = 'Principal' | 'Residencial' | 'Comercial' | 'Férias';
+export type AddressCategoryTypes = 'Principal' | 'Residencial' | 'Comercial' | 'Férias';
 
 export interface AddressTypes{
     id?: number;

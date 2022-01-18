@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { AddressTypes } from '../../models/address';
+import { Axios } from '../../services/axios';
 import { 
     Container, 
     Wrapper,
@@ -13,10 +14,10 @@ import {
 } from './styles';
 
 interface AddressCardProps extends AddressTypes {
-    
+    getSavedAddresses(): Promise<void>
 }
 
-export const AddressCard = ( { id, addressCategory, addressName, addressData} : AddressCardProps) => {
+export const AddressCard = ( { id, addressCategory, addressName, addressData, getSavedAddresses} : AddressCardProps) => {
     const addressText = `
         ${addressData.street}, ${addressData.number}, Bairro ${addressData.neighborhood}, ${addressData.city} - ${addressData.state}
     `;
@@ -25,9 +26,15 @@ export const AddressCard = ( { id, addressCategory, addressName, addressData} : 
 
     function handleGoToEditPage() {
         console.log(id);
+        localStorage.setItem('currentEditCardId', `${id}`);
         navigate('/edit');
     }
 
+    async function handleDeleteAddress(){
+        const resp = await Axios.delete(`/address/${id}`);
+        getSavedAddresses();
+        console.log(resp);
+    }
 
     return (
         <Container>
@@ -36,7 +43,7 @@ export const AddressCard = ( { id, addressCategory, addressName, addressData} : 
                     <AddressInfosTop>
                         <AddressInfosName>{addressName}</AddressInfosName>
                         <EditIcon onClick={() => handleGoToEditPage()} />
-                        <TrashIcon />
+                        <TrashIcon onClick={() => handleDeleteAddress()} />
                     </AddressInfosTop>
 
                     <AddressInfosText>{addressText}</AddressInfosText>

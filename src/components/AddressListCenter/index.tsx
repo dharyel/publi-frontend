@@ -72,6 +72,7 @@ export const AddressListCenter = () => {
                                     addressCategory={address.addressCategory}
                                     addressName={address.addressName}
                                     addressData={address.addressData}
+                                    getSavedAddresses={getSavedAddresses}
                                 />
                             )
                         })
