@@ -27,17 +27,17 @@
       }
     },
     {
-      "id": 3,
-      "addressCategory": "Comercial",
+      "addressCategory": "Férias",
       "addressName": "Meu local de trabalho",
       "addressData": {
-        "postalCode": "90680570",
-        "street": "Rua Cel. Aparício Borges",
-        "number": "1000",
+        "city": "Porto Alegre",
         "neighborhood": "Glória",
+        "number": "1001",
+        "postalCode": "90680570",
         "state": "RS",
-        "city": "Porto Alegre"
-      }
+        "street": "Rua Cel. Aparício Borges"
+      },
+      "id": 3
     },
     {
       "addressCategory": "Férias",
@@ -168,6 +168,32 @@
         "state": "RS",
         "city": "Porto Alegre"
       }
+    },
+    {
+      "addressCategory": "Residencial",
+      "addressName": "Casa do amor",
+      "addressData": {
+        "city": "Mundão",
+        "neighborhood": "Bairro do Coração",
+        "number": "1000",
+        "postalCode": "89220100",
+        "state": "SC",
+        "street": "Rua da paixão"
+      },
+      "id": 16
+    },
+    {
+      "addressCategory": "Principal",
+      "addressName": "Casa muito engraçada",
+      "addressData": {
+        "city": "Porto Belo",
+        "neighborhood": "N/A",
+        "number": "0",
+        "postalCode": "88210000",
+        "state": "SC",
+        "street": "Rua dos bobos"
+      },
+      "id": 17
     }
   ]
 }

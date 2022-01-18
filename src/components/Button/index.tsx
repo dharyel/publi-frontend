@@ -3,10 +3,11 @@ import { ButtonElement } from './styles';
 interface ButtonProps{
     text: string;
     onClick?: () => void;
+    margin?: string;
 }
 
-export const Button = ({text, onClick}: ButtonProps) => {
+export const Button = ({text, onClick, margin}: ButtonProps) => {
     return (
-        <ButtonElement onClick={onClick}>{text}</ButtonElement>
+        <ButtonElement margin={margin} onClick={onClick}>{text}</ButtonElement>
     );
 }

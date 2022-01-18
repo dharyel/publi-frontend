@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Button } from '../Button';
 import { Axios } from '../../services/axios';
 import { AddressTypes, AddressCategoryTypes } from '../../models/address';
@@ -17,10 +17,17 @@ import {
     ButtonWrapper,
 } from './styles';
 
-export const EditAddressCenter = () => {
+interface ViaCepData{
+    logradouro: string,
+    complemento: string,
+    bairro: string,
+    localidade: string,
+    uf: string,
+}
+
+export const AddAddressCenter = () => {
     const navigate = useNavigate();
-    const selectedEditCardId = Number(localStorage.getItem('currentEditCardId'));
-    const [addressInfo, setAddressInfo] = useState({} as AddressTypes);
+    
     const categories = ['Principal','Residencial','Comercial','Férias'];
   
     const [inputCategory, setInputCategory] = useState<AddressCategoryTypes>('Principal');
@@ -64,30 +71,9 @@ export const EditAddressCenter = () => {
         setInputNumber(value);
     }
 
-    useEffect (() => {
-        async function loadCardInfos(){
-            const resp = await Axios.get<AddressTypes>(`/address/${selectedEditCardId}`);
-            setAddressInfo(resp.data);
-        }
-
-        loadCardInfos();
-    }, [selectedEditCardId]);
-
-    useEffect(() => {
-        setInputCategory(addressInfo?.addressCategory);
-        setInputAddressName(addressInfo?.addressName);
-        setInputPostalCode(addressInfo?.addressData?.postalCode);
-        setInputStreet(addressInfo?.addressData?.street);
-        setInputNeighborhood(addressInfo?.addressData?.neighborhood);
-        setInputCity(addressInfo?.addressData?.city);
-        setInputState(addressInfo?.addressData?.state);
-        setInputNumber(addressInfo?.addressData?.number);
-
-    }, [addressInfo]);
-
-    async function handleSaveEditAddress (e: React.FormEvent<HTMLFormElement>) {
+    async function handleSaveNewAddress (e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
-        let updatedAddress: AddressTypes = {
+        let newAddress: AddressTypes = {
             addressCategory: inputCategory,
             addressName: inputAddressName,
             addressData: {
@@ -100,9 +86,9 @@ export const EditAddressCenter = () => {
             }
         };
 
-        const resp = await Axios.put(
-            `/address/${selectedEditCardId}`, 
-            JSON.stringify(updatedAddress), 
+        const resp = await Axios.post(
+            `/address/`, 
+            JSON.stringify(newAddress), 
             {
                  "headers": { 'Content-Type': 'application/json'}
             }
@@ -116,22 +102,33 @@ export const EditAddressCenter = () => {
         
     }
 
+    async function loadCepData(){
+        
+        try{
+            let resp = await fetch(`https://viacep.com.br/ws/${inputPostalCode}/json/`);
+            let data: ViaCepData = await resp.json();
+
+            setInputStreet(data.logradouro);
+            setInputNeighborhood(data.bairro);
+            setInputCity(data.localidade);
+            setInputState(data.uf);
+
+            console.log(data);
+        } catch (err){
+            console.log("Ocorreu o erro: " + err);
+        }
+    }
+
     return(
         <Container>
-            {addressInfo &&
-            <WrapperForm onSubmit={(e) => handleSaveEditAddress(e)}>
+            <WrapperForm onSubmit={(e) => handleSaveNewAddress(e)}>
                 <EditAddressWrapper>
                     <InfosText>Informações</InfosText>
                     <InputWrapper>
                         <AddressCategorySelect name="categorySelect" onChange={(e) => handleSelectInputChange(e.target.value)} >
-                            {addressInfo &&
+                            {
                                 categories.map((category, index) => {
-                                    if (addressInfo.addressCategory === category){
-                                        return (<AddressCategoryOption key={index} selected value={category}>{category}</AddressCategoryOption>)
-                                    } else {
-                                        return (<AddressCategoryOption key={index} value={category}>{category}</AddressCategoryOption>)
-                                    }
-                                    
+                                    return (<AddressCategoryOption key={index} value={category}>{category}</AddressCategoryOption>)
                                 })
                             }
                         </AddressCategorySelect>
@@ -154,6 +151,7 @@ export const EditAddressCenter = () => {
                             name="postalCode" 
                             value={inputPostalCode}  
                             onChange={(e) => handlePostalCodeInputChange(e.target.value)}
+                            onBlur={loadCepData}
                         />
                         <HorizontalRowInput />
                     </InputWrapper>
@@ -210,14 +208,12 @@ export const EditAddressCenter = () => {
 
                     <ButtonWrapper>
                         <Button 
-                            text="Editar"
+                            text="Cadastrar"
                             margin="40px 0px 0px 0px"
                         />
                     </ButtonWrapper>
                 </EditAddressWrapper>
             </WrapperForm>
-
-            }
         </Container>
     );
 }
