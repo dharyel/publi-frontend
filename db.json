@@ -14,17 +14,17 @@
       }
     },
     {
-      "id": 2,
       "addressCategory": "Residencial",
-      "addressName": "Casa da praia",
+      "addressName": "Casa da praia 3°",
       "addressData": {
-        "postalCode": "88210000",
-        "street": "Rua José Alexandre Rocha",
-        "number": "1000",
+        "city": "Porto Belo",
         "neighborhood": "Perequê",
+        "number": "1000",
+        "postalCode": "88210000",
         "state": "SC",
-        "city": "Porto Belo"
-      }
+        "street": "Rua José Alexandre Rocha"
+      },
+      "id": 2
     },
     {
       "addressCategory": "Férias",

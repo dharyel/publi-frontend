@@ -9,6 +9,6 @@ export const TitleName = styled.h1`
     color: ${colors.brandcolorPrimaryDefault};
 
     @media (max-width: 850px){
-        margin-bottom: 20px;
+        font-size: 18px;
     }
 `;

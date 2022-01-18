@@ -1,18 +1,18 @@
 import { AddressList } from "./pages/AddressList";
 import { EditAddress } from "./pages/EditAddress";
 import { AddAddress } from "./pages/AddAddress";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<AddressList />} />
         <Route path="/edit" element={<EditAddress />} />
         <Route path="/new" element={<AddAddress />} />
       </Routes>
       
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

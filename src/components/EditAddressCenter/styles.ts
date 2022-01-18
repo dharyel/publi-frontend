@@ -30,6 +30,10 @@ export const EditAddressWrapper = styled.div`
 
     border-radius: 8px;
     background-color: ${colors.bgWhite};
+
+    @media (max-width: 850px) {
+        width: 100%;
+    }
 `;
 
 export const InfosText = styled.label `

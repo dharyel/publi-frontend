@@ -18,12 +18,14 @@ export const Wrapper = styled.div `
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    flex-wrap: wrap;
 
     margin: 0 auto;
 
+    text-align: center;
+
     @media (max-width: 850px) {
         justify-content: center;
+        align-items: center;
     }
 `;
 
@@ -41,4 +43,5 @@ export const BackToAddressListButton = styled(FaChevronLeft)`
     :hover {
         filter: brightness(0.5);
     }
+    
 `;
